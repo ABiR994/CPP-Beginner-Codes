@@ -32,6 +32,6 @@ output/
 # Temporary files
 *.tmp
 
-test.cpp
+#test.cpp
 
 .vscode
