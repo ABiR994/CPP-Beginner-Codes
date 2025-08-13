@@ -33,3 +33,5 @@ output/
 *.tmp
 
 test.cpp
+
+.vscode
