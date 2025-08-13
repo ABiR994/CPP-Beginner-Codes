@@ -27,6 +27,7 @@ a.out
 /bin/
 /lib/
 /dist/
+/output/
 
 # Temporary files
 *.tmp
