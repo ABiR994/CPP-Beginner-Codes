@@ -23,11 +23,11 @@ a.out
 *.swp
 
 # Build directories
-/build/
-/bin/
-/lib/
-/dist/
-/output/
+build/
+bin/
+lib/
+dist/
+output/
 
 # Temporary files
 *.tmp
