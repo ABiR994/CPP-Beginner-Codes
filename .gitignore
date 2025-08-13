@@ -31,3 +31,7 @@ output/
 
 # Temporary files
 *.tmp
+
+test.cpp
+
+.vscode
