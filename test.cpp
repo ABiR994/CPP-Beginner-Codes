@@ -1,34 +1,21 @@
 #include <iostream>
-#include <string.h>
-#include <cstring>
 using namespace std;
 
+int linear_search(int arr[], int size, int target) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == target) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 int main() {
-    char s1[] = "Hello, ";
-    char s2[] = "World!";
-    cout << strlen(s1) << endl;
-    cout << strlen(s2) << endl;
-    char s3[] = "Hello, ";
-    strcat(s3, s2);
-    cout << s3 << endl;
-    cout << strcmp(s1, s2) << endl;
-    cout << strcmp(s2, s1) << endl;
-    cout << strcmp(s1, s1) << endl;
-    cout << strcmp(s2, s3) << endl;
-    strcpy(s3, s1);
-    cout << s3 << endl;
-    strncat(s3, s1, 3);
-    cout << s3 << endl;
-    cout << strncmp(s1, s2, 3) << endl;
-    cout << strncmp(s2, s1, 3) << endl;
-    cout << strncmp(s1, s1, 3) << endl;
-    cout << strncmp(s2, s3, 3) << endl;
-    strncpy(s3, s1, 3);
-    cout << s3 << endl;
-    cout << strchr(s1, 'H') << endl;
-    cout << strchr(s1, 'o') << endl;
-    cout << strchr(s1, 'l') << endl;
-    char a[] = "Hello, World!";
-    char b[] = "World";   cout << strstr(a, b) << endl;
+    int arr[] = {4, 2, 7, 8, 1, 2, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target;
+    cout << "Enter the target value to search: ";
+    cin >> target;
+    cout << "Index of target (" << target << "): " << linear_search(arr, size, target) << endl;
     return 0;
 }
