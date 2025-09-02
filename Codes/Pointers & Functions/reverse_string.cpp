@@ -1,19 +1,22 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
-int main() {
-    char str[] = "Hello, World!";
-    int size = sizeof(str) / sizeof(str[0]);
+void rev_str(char *str) {
     int start = 0;
-    int end = size - 1;
-    for(int i = start; i < end; i++) {
+    int end = strlen(str) - 1;
+    while(start < end) {
         swap(str[start], str[end]);
         start++;
         end--;
     }
-    for(int i = 0; i < size; i++) {
-        cout << str[i];
-    }
-    cout << endl;
+}
+
+int main() {
+    char str[] = "Hello, World!";
+    cout << str << endl;
+    char *ptr = str;
+    rev_str(ptr);
+    cout << "Reversed: " << str << endl;
     return 0;
 }
