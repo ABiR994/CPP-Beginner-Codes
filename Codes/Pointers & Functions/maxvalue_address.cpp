@@ -3,10 +3,12 @@ using namespace std;
 
 int* findMax(int *arr, int size) {
     int *maxAdd = arr;
-    for (int i = 1; i < size; i++) {
-        if (*(arr + i) > *maxAdd) {
-            maxAdd = arr + i;
+    while(size > 0) {
+        if(*arr > *maxAdd) {
+            maxAdd = arr;
         }
+        arr++;
+        size--;
     }
     return maxAdd;
 }
